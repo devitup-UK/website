@@ -1,0 +1,51 @@
+// Dependencies are to be moved into a new project.
+@import "./_dependencies";
+@import "./_variables";
+@import "./_fonts";
+@import "./_bootstrap_extensions";
+
+body {
+  @extend .background-color-light-grey;
+  @extend .font-family-open-sans;
+  @extend .color-grey;
+}
+
+.navbar {
+  @extend .p-4;
+  @extend .splitter-drop-shadow;
+
+  .nav-item {
+    @extend .font-weight-400;
+    @extend .mx-4;
+
+    .router-link-active {
+      &.router-link-exact-active {
+        @extend .position-relative;
+
+        &:before {
+          content: '';
+          @extend .position-absolute;
+          @extend .background-color-turqoise;
+          @extend .bottom-0;
+          @extend .left-0;
+          @extend .right-0;
+          height: 4px;
+        }
+      }
+    }
+
+    &:first-child {
+      @extend .ml-0;
+      @extend .mr-4;
+    }
+
+    &:last-child {
+      @extend .ml-4;
+      @extend .mr-0;
+    }
+  }
+}
+
+h1 {
+  font-size: 3rem;
+}
