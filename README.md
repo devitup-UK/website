@@ -1,4 +1,4 @@
-# website2
+# DevItUp
 
 ## Project setup
 ```

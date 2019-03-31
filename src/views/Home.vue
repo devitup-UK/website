@@ -9,6 +9,7 @@
 import Banner from '@/components/banner/banner.component.vue'
 
 export default {
+  title: 'Home',
   name: 'home',
   components: {
     Banner
