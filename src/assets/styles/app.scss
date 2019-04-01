@@ -47,22 +47,78 @@ body {
 }
 
 .banner {
-  position: relative;
+  @extend .position-relative;
+  @extend .my-5;
+
+    .banner__content {
+      @extend .py-6;
+      @extend .pr-4;
+    }
+
+    .banner__title {
+      @extend .mb-4;
+    }
+
+    .banner__subtitle {
+      @extend .mr-5;
+      font-size: 1.2rem;
+    }
 
     &:before {
       content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
+      @extend .position-absolute;
+      @extend .top-0;
+      @extend .right-0;
+      @extend .bottom-0;
+      @extend .d-block;
       left: 50%;
-      display: block;
       background: url('./assets/img/banner.png');
-      background-position: center right;
-      border-radius: 50% 0 0 50%;
+      background-position: center center;
+      border-top-left-radius: 220px 220px;
+      border-bottom-left-radius: 220px 200px;
     }
 }
 
-h1 {
+.title {
+  @extend .pb-1;
+  @extend .pr-2;
+  @extend .font-weight-600;
+  border-style: solid;
+  border-width: 0 0 5px;
   font-size: 3rem;
+
+  &.title--aqua {
+    border-color: $color-aqua;
+  } 
+}
+
+
+.btn {
+  &.btn-primary {
+    @extend .border-radius-0;
+    @extend .border-0;
+    @extend .p-3;
+    background-color: $color-aqua;
+
+    &:focus {
+      box-shadow: unset;
+      outline: none;
+    }
+
+    &:active {
+      color: unset;
+      background-color: unset;
+
+      &:not(:disabled) {
+        color: unset;
+        background-color: unset;
+      }
+      
+      &:not(.disabled) {
+        color: $color-white;
+        background-color: $color-aqua;
+      }
+    }
+    
+  }
 }
