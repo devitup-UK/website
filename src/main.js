@@ -4,12 +4,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import './registerServiceWorker'
-import titleMixin from './components/mixins/title.mixin';
+import metaData from './helpers/metadata.helper'
 
 Vue.config.productionTip = false
 
-Vue.use(BootstrapVue);
-Vue.mixin(titleMixin)
+Vue.use(BootstrapVue)
+
+metaData.updateMetaTags(router)
 
 new Vue({
   router,

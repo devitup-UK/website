@@ -46,6 +46,23 @@ body {
   }
 }
 
+.banner {
+  position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      display: block;
+      background: url('./assets/img/banner.png');
+      background-position: center right;
+      border-radius: 50% 0 0 50%;
+    }
+}
+
 h1 {
   font-size: 3rem;
 }

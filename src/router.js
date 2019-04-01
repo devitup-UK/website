@@ -7,8 +7,9 @@ import Services from './views/Services.vue'
 import Projects from './views/Projects.vue'
 import Contact from './views/Contact.vue'
 
-Vue.use(Router)
+import metaData from './helpers/metadata.helper'
 
+Vue.use(Router)
 
 export default new Router({
   mode: 'history',
@@ -16,27 +17,92 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        title: metaData.generateTitle('Home'),
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The home page of our example app.'
+          },
+          {
+            property: 'og:description',
+            content: 'The home page of our example app.'
+          }
+        ]
+      }
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: About,
+      meta: {
+        title: metaData.generateTitle('About Us'),
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The \'About Us\' page of our example app.'
+          },
+          {
+            property: 'og:description',
+            content: 'The \'About Us\' page of our example app.'
+          }
+        ]
+      }
     },
     {
       path: '/services',
       name: 'services',
-      component: Services
+      component: Services,
+      meta: {
+        title: metaData.generateTitle('Services'),
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The \'Services\' page of our example app.'
+          },
+          {
+            property: 'og:description',
+            content: 'The \'Services\' page of our example app.'
+          }
+        ]
+      }
     },
     {
       path: '/projects',
       name: 'projects',
-      component: Projects
+      component: Projects,
+      meta: {
+        title: metaData.generateTitle('Projects'),
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The \'Projects\' page of our example app.'
+          },
+          {
+            property: 'og:description',
+            content: 'The \'Projects\' page of our example app.'
+          }
+        ]
+      }
     },
     {
       path: '/contact',
       name: 'contact',
-      component: Contact
+      component: Contact,
+      meta: {
+        title: metaData.generateTitle('Contact Us'),
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The \'Contact\' page of our example app.'
+          },
+          {
+            property: 'og:description',
+            content: 'The \'Contact\' page of our example app.'
+          }
+        ]
+      }
     }
   ]
-})
+});

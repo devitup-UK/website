@@ -25,3 +25,18 @@
 .right-0 {
     right: 0;
 }
+
+.py-6 {
+    padding-top: ($spacer * 6) !important;
+    padding-bottom: ($spacer * 6) !important;
+}
+
+.py-7 {
+    padding-top: ($spacer * 12) !important;
+    padding-bottom: ($spacer * 12) !important;
+}
+
+.py-8 {
+    padding-top: ($spacer * 24) !important;
+    padding-bottom: ($spacer * 24) !important;
+}
