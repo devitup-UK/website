@@ -1,0 +1,10 @@
+<div class="box" v-bind:class="{ 'box--outline': outline }">
+    <div class="box__top">
+        <div class="top__content">
+            <font-awesome-icon :icon="icon.name" :size="icon.size" fixed-width />
+        </div>
+    </div>
+    <div class="box__content">
+        <p>{{ content }}</p>
+    </div>
+</div>

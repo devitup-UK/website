@@ -1,3 +1,15 @@
+.color-grey {
+    color: $color-grey;
+}
+
+.color-white {
+    color: $color-white;
+}
+
+.background-color-aqua {
+    background-color: $color-aqua;
+}
+
 .background-color-light-grey {
     background-color: $color-light-grey;
 }
@@ -6,12 +18,142 @@
     background-color: $color-turqoise;
 }
 
-.color-grey {
-    color: $color-grey;
+.background-no-repeat {
+    background-repeat: no-repeat;
 }
 
+.py-6 {
+    padding-top: ($spacer * 6) !important;
+    padding-bottom: ($spacer * 6) !important;
+}
+
+@include media-breakpoint-up(sm) {
+    .color-sm-grey {
+        color: $color-grey;
+    }
+
+    .color-sm-white {
+        color: $color-white;
+    }
+
+    .background-color-sm-light-grey {
+        background-color: $color-light-grey;
+    }
+    
+    .background-color-sm-turqoise {
+        background-color: $color-turqoise;
+    }
+
+    .background-color-sm-aqua {
+        background-color: $color-aqua;
+    }
+
+    .background-sm-no-repeat {
+        background-repeat: no-repeat;
+    }    
+
+    .py-sm-6 {
+        padding-top: ($spacer * 6) !important;
+        padding-bottom: ($spacer * 6) !important;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .color-md-grey {
+        color: $color-grey;
+    }
+
+    .color-md-white {
+        color: $color-white;
+    }
+
+    .background-color-md-light-grey {
+        background-color: $color-light-grey;
+    }
+    
+    .background-color-md-turqoise {
+        background-color: $color-turqoise;
+    }
+
+    .background-color-md-aqua {
+        background-color: $color-aqua;
+    }
+
+    .background-md-no-repeat {
+        background-repeat: no-repeat;
+    }    
+
+    .py-md-6 {
+        padding-top: ($spacer * 6) !important;
+        padding-bottom: ($spacer * 6) !important;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .color-lg-grey {
+        color: $color-grey;
+    }
+
+    .color-lg-white {
+        color: $color-white;
+    }
+
+    .background-color-lg-light-grey {
+        background-color: $color-light-grey;
+    }
+    
+    .background-color-lg-turqoise {
+        background-color: $color-turqoise;
+    }
+
+    .background-color-lg-aqua {
+        background-color: $color-aqua;
+    }
+
+    .background-lg-no-repeat {
+        background-repeat: no-repeat;
+    }
+
+    .py-lg-6 {
+        padding-top: ($spacer * 6) !important;
+        padding-bottom: ($spacer * 6) !important;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .color-xl-grey {
+        color: $color-grey;
+    }
+
+    .color-xl-white {
+        color: $color-white;
+    }
+
+    .background-color-xl-light-grey {
+        background-color: $color-light-grey;
+    }
+    
+    .background-color-xl-turqoise {
+        background-color: $color-turqoise;
+    }
+
+    .background-color-xl-aqua {
+        background-color: $color-aqua;
+    }
+
+    .background-xl-no-repeat {
+        background-repeat: no-repeat;
+    }    
+
+    .py-xl-6 {
+        padding-top: ($spacer * 6) !important;
+        padding-bottom: ($spacer * 6) !important;
+    }
+}
+
+
 .splitter-drop-shadow {
-    box-shadow: 0px -4px 5px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 }
 
 .bottom-0 {
@@ -38,10 +180,7 @@
     border-width: 0;
 }
 
-.py-6 {
-    padding-top: ($spacer * 6) !important;
-    padding-bottom: ($spacer * 6) !important;
-}
+
 
 .py-7 {
     padding-top: ($spacer * 12) !important;

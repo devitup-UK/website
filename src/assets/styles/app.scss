@@ -13,6 +13,7 @@ body {
 .navbar {
   @extend .p-4;
   @extend .splitter-drop-shadow;
+  margin-bottom: 3px;
 
   .nav-item {
     @extend .font-weight-400;
@@ -48,11 +49,19 @@ body {
 
 .banner {
   @extend .position-relative;
-  @extend .my-5;
+  @extend .color-white;
+  @extend .text-center;
+
+  @extend .my-lg-5;
+  @extend .text-lg-left;
+  @extend .color-lg-grey;
 
     .banner__content {
-      @extend .py-6;
+      @extend .py-4;
       @extend .pr-4;
+
+      @extend .py-lg-6;
+      z-index: 2;
     }
 
     .banner__title {
@@ -60,7 +69,7 @@ body {
     }
 
     .banner__subtitle {
-      @extend .mr-5;
+      @extend .mr-lg-5;
       font-size: 1.2rem;
     }
 
@@ -70,26 +79,59 @@ body {
       @extend .top-0;
       @extend .right-0;
       @extend .bottom-0;
+      @extend .left-0;
       @extend .d-block;
-      left: 50%;
+      @extend .background-no-repeat;
       background: url('./assets/img/banner.png');
       background-position: center center;
-      border-top-left-radius: 220px 220px;
-      border-bottom-left-radius: 220px 200px;
+    }
+
+    &:after {
+      content: '';
+      @extend .position-absolute;
+      @extend .top-0;
+      @extend .right-0;
+      @extend .bottom-0;
+      @extend .left-0;
+      @extend .d-block;
+      @extend .background-color-turqoise;
+      opacity: .5;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &:before {
+        left: 50%;
+        border-top-left-radius: 220px 220px;
+        border-bottom-left-radius: 220px 200px; 
+      }
+
+      &:after {
+        content: unset;
+      }
     }
 }
 
 .title {
   @extend .pb-1;
-  @extend .pr-2;
+  @extend .px-3;
   @extend .font-weight-600;
   border-style: solid;
   border-width: 0 0 5px;
-  font-size: 3rem;
+
+  @extend .px-lg-0;
+  @extend .pr-lg-2;
 
   &.title--aqua {
     border-color: $color-aqua;
-  } 
+  }
+
+  &.title--turqoise {
+    border-color: $color-turqoise;
+  }
+
+  &.title--center {
+    @extend .px-2;
+  }
 }
 
 
@@ -121,4 +163,111 @@ body {
     }
     
   }
+}
+
+.guarantee {
+  @extend .position-relative;
+  @extend .color-white;
+  @extend .text-center;
+  @extend .pt-5;
+  @extend .background-no-repeat;
+  @extend .splitter-drop-shadow;
+  background-image: url('./assets/img/guarantee.png');
+  background-position: center center;
+
+  .guarantee__content, .guarantee__title {
+    @extend .position-relative;
+    z-index: 2;
+  }
+
+  .guarantee__content {
+    @extend .pt-5;
+  }
+
+  &:before {
+    content: '';
+    @extend .position-absolute;
+    @extend .top-0;
+    @extend .right-0;
+    @extend .bottom-0;
+    @extend .left-0;
+    background-color: $color-dark-grey;
+    opacity: .7;
+    z-index: 1;
+  }
+}
+
+.box-wrapper {
+  @extend .mb-5;
+}
+
+.box {
+  @extend .position-relative;
+  @extend .p-3;
+  @extend .h-100;
+
+  &.box--outline {
+    @extend .d-flex;
+    @extend .justify-content-center;
+    border-right: 1px solid $color-white;
+    border-bottom: 1px solid $color-white;
+    border-left: 1px solid $color-white;
+  }
+
+  .box__top {
+    @extend .d-flex;
+    @extend .flex-row;
+    @extend .w-100;
+    @extend .position-absolute;
+    @extend .top-0;
+    @extend .left-0;
+
+    &:before, &:after {
+      @extend .d-block;
+      content: '';
+      flex: 2 0 0;
+      height: 1px;
+      border-top: 1px solid $color-white;
+    }
+
+    &:before {
+      border-radius: 3px 0 0 0;
+    }
+
+    &:after {
+      border-radius: 0 3px 0 0;
+    }
+
+    .top__content {
+      color: $color-white;
+      overflow: hidden;
+      flex: 0 0 85px;
+      margin-top: -1.4rem;
+      text-align: center;
+    }
+  }
+
+  .box__content {
+    @extend .pt-4;
+    @extend .d-flex;
+    @extend .align-self-center;
+  }
+}
+
+
+.process {
+  @extend .py-5;
+
+  .process__title {
+    @extend .text-center;
+  }
+}
+
+.journey {
+  @extend .mt-5;
+  @extend .background-no-repeat;
+
+  min-height: 1360px;
+  background-image: url('./assets/img/Journey - Mobile.png');
+  background-position: center center;
 }
