@@ -13,6 +13,7 @@ export default {
         data: {
           boxes: [
             {
+              id: 1,
               outline: true,
               icon: {
                 name: ['far', 'clock'],
@@ -21,6 +22,7 @@ export default {
               content: 'Allocated time to your projects.'
             },
             {
+              id: 2,
               outline: true,
               icon: {
                 name: 'code',
@@ -29,6 +31,7 @@ export default {
               content: 'Latest technologies for your solution.'
             },
             {
+              id: 3,
               outline: true,
               icon: {
                 name: 'phone',

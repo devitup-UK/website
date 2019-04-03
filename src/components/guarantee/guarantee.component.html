@@ -5,7 +5,7 @@
     <div class="guarantee__content">
         <b-container>
             <b-row class="justify-content-center">
-                <b-col md="5" lg="3" class="box-wrapper" v-for="box in data.boxes">
+                <b-col md="5" lg="3" class="box-wrapper" v-for="box in data.boxes" v-bind:data="box" v-bind:key="box.id">
                     <box :content="box.content" :icon="{ name: box.icon.name, size: box.icon.size }" :outline="box.outline"></box>
                 </b-col>
             </b-row>

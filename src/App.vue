@@ -1,17 +1,20 @@
 <template>
-  <div id="app">
+  <main id="app">
     <navigation></navigation>
     <router-view/>
-  </div>
+    <DevItUpFooter></DevItUpFooter>
+  </main>
 </template>
 
 <script>
 import Navigation from '@/components/navigation/navigation.component.vue'
+import DevItUpFooter from '@/components/footer/footer.component.vue'
 
 export default {
   name: 'app',
   components: {
-    Navigation
+    Navigation,
+    DevItUpFooter
   }
 }
 </script>
