@@ -18,6 +18,10 @@
     background-color: $color-turqoise;
 }
 
+.background-color-light-blue {
+    background-color: $color-light-blue;
+}
+
 .background-no-repeat {
     background-repeat: no-repeat;
 }
@@ -25,6 +29,10 @@
 .py-6 {
     padding-top: ($spacer * 6) !important;
     padding-bottom: ($spacer * 6) !important;
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 @include media-breakpoint-up(sm) {
@@ -48,6 +56,10 @@
         background-color: $color-aqua;
     }
 
+    .background-color-sm-light-blue {
+        background-color: $color-light-blue;
+    }
+
     .background-sm-no-repeat {
         background-repeat: no-repeat;
     }    
@@ -55,6 +67,10 @@
     .py-sm-6 {
         padding-top: ($spacer * 6) !important;
         padding-bottom: ($spacer * 6) !important;
+    }
+
+    .overflow-sm-hidden {
+        overflow: hidden;
     }
 }
 
@@ -75,6 +91,10 @@
         background-color: $color-turqoise;
     }
 
+    .background-color-md-light-blue {
+        background-color: $color-light-blue;
+    }
+
     .background-color-md-aqua {
         background-color: $color-aqua;
     }
@@ -86,6 +106,10 @@
     .py-md-6 {
         padding-top: ($spacer * 6) !important;
         padding-bottom: ($spacer * 6) !important;
+    }
+
+    .overflow-md-hidden {
+        overflow: hidden;
     }
 }
 
@@ -106,6 +130,10 @@
         background-color: $color-turqoise;
     }
 
+    .background-color-lg-light-blue {
+        background-color: $color-light-blue;
+    }
+
     .background-color-lg-aqua {
         background-color: $color-aqua;
     }
@@ -117,6 +145,10 @@
     .py-lg-6 {
         padding-top: ($spacer * 6) !important;
         padding-bottom: ($spacer * 6) !important;
+    }
+
+    .overflow-lg-hidden {
+        overflow: hidden;
     }
 }
 
@@ -141,6 +173,10 @@
         background-color: $color-aqua;
     }
 
+    .background-color-xl-blue {
+        background-color: $color-light-blue;
+    }
+
     .background-xl-no-repeat {
         background-repeat: no-repeat;
     }    
@@ -148,6 +184,10 @@
     .py-xl-6 {
         padding-top: ($spacer * 6) !important;
         padding-bottom: ($spacer * 6) !important;
+    }
+
+    .overflow-xl-hidden {
+        overflow: hidden;
     }
 }
 

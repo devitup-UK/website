@@ -8,6 +8,17 @@ body {
   @extend .background-color-light-grey;
   @extend .font-family-open-sans;
   @extend .color-grey;
+
+  #app {
+    @extend .d-flex;
+    @extend .flex-column;
+
+    min-height: 100vh;
+
+    main {
+      flex: 1;
+    }
+  }
 }
 
 .navbar {
@@ -294,6 +305,7 @@ body {
   @extend .color-white;
   @extend .color-lg-grey;
   @extend .py-5;
+  @extend .overflow-hidden;
   
   z-index: -1;
 
@@ -385,4 +397,59 @@ body {
       width: 50%;
     }
   }
+}
+
+footer {
+  @extend .background-color-light-blue;
+  @extend .py-4;
+  @extend .text-center;
+  @extend .color-white;
+  
+  .footer__logo {
+    @extend .text-center;
+  }
+
+  .footer__navigation {
+    @extend .mt-3;
+  }
+
+  .footer__social-links {
+    @extend .p-0;
+    @extend .mt-2;
+    @extend .mb-0;
+    list-style: none;
+
+    .footer__social-link {
+      @extend .d-inline-block;
+      @extend .p-0;
+      @extend .m-0;
+    }
+  }
+}
+
+.navbar--footer {
+  font-size: .8rem;
+
+  .nav-item {
+    .nav-link {
+      @extend .pt-0;
+
+      &:active, &:visited, &:hover, &:link {
+        color: $white;
+      }
+    }
+  }
+}
+
+.copyright {
+  @extend .py-3;
+  @extend .px-2;
+
+  .copyright__developer {
+    @extend .text-right;
+  }
+}
+
+.developer-logo {
+  @extend .mw-100;
 }
