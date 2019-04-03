@@ -306,6 +306,7 @@ body {
   @extend .color-lg-grey;
   @extend .py-5;
   @extend .overflow-hidden;
+  @extend .mb-lg-4;
   
   z-index: -1;
 
@@ -368,10 +369,11 @@ body {
 
   &:before, &:after {
     @extend .position-absolute;
-    @extend .top-0;
     @extend .right-0;
-    @extend .bottom-0;
     @extend .left-0;
+
+    top: 1px;
+    bottom: 1px;
   }
 
   &:before {
