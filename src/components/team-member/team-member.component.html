@@ -1,0 +1,20 @@
+<div class="team-member">
+    <b-row>
+        <b-col cols="12" lg="6">
+            <div class="team-member__photo">
+                <img :src="photo" :alt="name" :title="name">
+            </div>
+        </b-col>
+        <b-col cols="12" lg="6">
+            <div class="team-member__profile">
+                <div class="team-member__details">
+                    <h3>
+                        <span class="title title--aqua">{{ name }}</span>
+                    </h3>
+                    <h4 class="team-member__role">{{ role }}</h4>
+                    <p class="team-member__about">{{ about }}</p>
+                </div>
+            </div>
+        </b-col>
+    </b-row>
+</div>

@@ -35,6 +35,22 @@
     overflow: hidden;
 }
 
+.top-0 {
+    top: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
 @include media-breakpoint-up(sm) {
     .color-sm-grey {
         color: $color-grey;
@@ -71,6 +87,22 @@
 
     .overflow-sm-hidden {
         overflow: hidden;
+    }
+
+    .top-sm-0 {
+        top: 0;
+    }
+    
+    .right-sm-0 {
+        right: 0;
+    }
+    
+    .bottom-sm-0 {
+        bottom: 0;
+    }
+    
+    .left-sm-0 {
+        left: 0;
     }
 }
 
@@ -111,6 +143,22 @@
     .overflow-md-hidden {
         overflow: hidden;
     }
+
+    .top-md-0 {
+        top: 0;
+    }
+    
+    .right-md-0 {
+        right: 0;
+    }
+    
+    .bottom-md-0 {
+        bottom: 0;
+    }
+    
+    .left-md-0 {
+        left: 0;
+    }
 }
 
 @include media-breakpoint-up(lg) {
@@ -149,6 +197,22 @@
 
     .overflow-lg-hidden {
         overflow: hidden;
+    }
+
+    .top-lg-0 {
+        top: 0;
+    }
+    
+    .right-lg-0 {
+        right: 0;
+    }
+    
+    .bottom-lg-0 {
+        bottom: 0;
+    }
+    
+    .left-lg-0 {
+        left: 0;
     }
 }
 
@@ -189,6 +253,22 @@
     .overflow-xl-hidden {
         overflow: hidden;
     }
+
+    .top-xl-0 {
+        top: 0;
+    }
+    
+    .right-xl-0 {
+        right: 0;
+    }
+    
+    .bottom-xl-0 {
+        bottom: 0;
+    }
+    
+    .left-xl-0 {
+        left: 0;
+    }
 }
 
 
@@ -196,21 +276,7 @@
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 }
 
-.bottom-0 {
-    bottom: 0;
-}
 
-.left-0 {
-    left: 0;
-}
-
-.right-0 {
-    right: 0;
-}
-
-.top-0 {
-    top: 0;
-}
 
 .border-radius-0 {
     border-radius: 0;
