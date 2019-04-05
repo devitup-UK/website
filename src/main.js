@@ -2,7 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-import { faCode, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faPhone, faLaptopCode, faMobileAlt, faPaintBrush } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faTwitter, faInstagram, faPinterest } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
 
@@ -18,7 +18,7 @@ Vue.component('font-awesome-layers-text', FontAwesomeLayersText)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
-library.add(faClock, faCode, faPhone, faFacebook, faTwitter, faInstagram, faPinterest)
+library.add(faClock, faCode, faPhone, faFacebook, faTwitter, faInstagram, faPinterest, faLaptopCode, faMobileAlt, faPaintBrush)
 metaData.updateMetaTags(router)
 
 new Vue({

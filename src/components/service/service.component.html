@@ -1,12 +1,22 @@
 <div class="service-card">
     <div class="service-card__inner">
         <div class="service-card__front">
-            <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+            <img :src="img" :alt="title" :title="title">
+            <div class="service-card__up">
+                <div class="service-card__front-content">
+                    <div class="service-card__icon">
+                        <font-awesome-icon :icon="icon.name" :size="icon.size" fixed-width />
+                    </div>
+                    <h3>{{ title }}</h3> 
+                </div>
+            </div>
         </div>
         <div class="service-card__back">
-            <h1>John Doe</h1> 
-            <p>Architect & Engineer</p> 
-            <p>We love that guy</p>
+            <div class="service-card__back-content">
+                <p>
+                    <slot></slot>
+                </p>
+            </div>
         </div>
     </div>
 </div>

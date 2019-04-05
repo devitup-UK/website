@@ -1,8 +1,8 @@
 <div class="services-available">
     <b-container>
-        <b-row>
-            <b-col cols="12" md="4" lg="3">
-                <service></service>
+        <b-row class="justify-content-center">
+            <b-col cols="12" md="6" lg="4" v-for="service in services" v-bind:data="service.title" v-bind:key="service.title">
+                <service :img="service.img" :title="service.title" :icon="service.icon">{{ service.description }}</service>
             </b-col>
         </b-row>
     </b-container>
