@@ -17,6 +17,9 @@ body {
 
     main {
       flex: 1;
+
+      // This code is to make the navigation stick while scrolling, not sure whether to keep this or not.
+      // margin-top: 180px;
     }
   }
 }
@@ -25,6 +28,12 @@ body {
   @extend .p-4;
   @extend .splitter-drop-shadow;
   margin-bottom: 3px;
+
+  // This code is to make the navigation stick while scrolling, not sure whether to keep this or not.
+  // position: fixed;
+  // width: 100%;
+  // background: white;
+  // z-index: 10;
 
   .nav-item {
     @extend .font-weight-400;
