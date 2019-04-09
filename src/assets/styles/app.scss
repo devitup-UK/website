@@ -56,13 +56,13 @@ body {
     }
 
     &:first-child {
-      @extend .ml-0;
-      @extend .mr-4;
+      @extend .ml-lg-0;
+      @extend .mr-lg-4;
     }
 
     &:last-child {
-      @extend .ml-4;
-      @extend .mr-0;
+      @extend .ml-lg-4;
+      @extend .mr-lg-0;
     }
   }
 }
@@ -650,6 +650,40 @@ header {
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
+    }
+  }
+}
+
+.projects-available {
+  @extend .my-4;
+}
+
+.project {
+  @extend .my-2;
+  background-color: $color-gray;
+  border-radius: 1.2rem;
+
+  .project__title {
+    @extend .text-center;
+    @extend .py-3;
+  }
+
+  .project__image {
+    @extend .overflow-hidden;
+    padding-top: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .project__content {
+    @extend .px-3;
+    @extend .pt-2;
+    @extend .pb-3;
+    font-weight: 200;
+
+    p {
+      @extend .m-0;
     }
   }
 }
