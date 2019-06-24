@@ -3,6 +3,7 @@
 @import "./_variables";
 @import "./_fonts";
 @import "./_bootstrap_extensions";
+@import "./overwrites";
 
 body {
   @extend .background-color-light-grey;
@@ -21,6 +22,18 @@ body {
       // This code is to make the navigation stick while scrolling, not sure whether to keep this or not.
       // margin-top: 180px;
     }
+  }
+}
+
+a {
+  color: inherit;
+
+  &:active, &:hover, &:visited, &:link {
+    color: inherit;
+  }
+
+  &:hover {
+    @extend .text-underline;
   }
 }
 
@@ -156,32 +169,48 @@ body {
 
 
 .btn {
-  &.btn-primary {
-    @extend .border-radius-0;
-    @extend .border-0;
-    @extend .p-3;
-    background-color: $color-aqua;
+  @extend .border-0;
+  
+  &:focus {
+    box-shadow: unset;
+    outline: none;
+  }
 
-    &:focus {
-      box-shadow: unset;
-      outline: none;
-    }
+  &:active {
+    color: unset;
+    background-color: unset;
 
-    &:active {
+    &:not(:disabled) {
       color: unset;
       background-color: unset;
+    }
+  }
 
-      &:not(:disabled) {
-        color: unset;
-        background-color: unset;
-      }
+  &.btn-primary {
+    @extend .border-radius-0;
+    @extend .p-3;
+    color: $color-white;
+    background-color: $color-aqua;
+
+    &:active {
       
       &:not(.disabled) {
         color: $color-white;
         background-color: $color-aqua;
       }
     }
-    
+  }
+
+  &.btn-secondary {
+    background-color: $color-turqoise;
+
+    &:active {
+      
+      &:not(.disabled) {
+        color: $color-white;
+        background-color: $color-turqoise;
+      }
+    }
   }
 }
 
@@ -234,6 +263,30 @@ body {
     border-left: 1px solid $color-white;
   }
 
+  &.box--dashed {
+    border-style: dashed;
+  }
+
+  &.box--dark {
+    border-color: $color-grey;
+    border-width: 3px;
+    @extend .color-grey;
+
+    .box__top {
+      @extend .color-grey;
+
+      .top__content {
+        @extend .color-grey;
+        @extend .background-color-light-grey;
+      }
+    }
+  }
+
+  &.box--condensed {
+    @extend .h-auto;
+    @extend .mt-5;
+  }
+
   .box__top {
     @extend .d-flex;
     @extend .flex-row;
@@ -271,6 +324,7 @@ body {
     @extend .pt-4;
     @extend .d-flex;
     @extend .align-self-center;
+    @extend .flex-column;
   }
 }
 
@@ -685,5 +739,83 @@ header {
     p {
       @extend .m-0;
     }
+  }
+}
+
+.socials-list {
+  @extend .m-0;
+  @extend .p-0;
+  @extend .list-style-none;
+
+  .socials-list__item {
+    @extend .fab;
+
+    span {
+      @extend .font-family-open-sans;
+      @extend .position-relative;
+      top: -5px;
+    }
+
+    &:before {
+      font-size: 24px;
+    }
+
+    &.socials-list__item--twitter {
+      &:before {
+        content: fa-content($fa-var-twitter);
+      }
+    }
+
+    &.socials-list__item--facebook {
+      &:before {
+        content: fa-content($fa-var-facebook);
+      }
+    }
+
+    &.socials-list__item--instagram {
+      &:before {
+        content: fa-content($fa-var-instagram);
+      }
+    }
+
+    &.socials-list__item--pinterest { 
+      &:before {
+        content: fa-content($fa-var-pinterest);
+      }
+    }
+    
+  }
+}
+
+.contact-form {
+  background-color: $color-light-aqua;
+  @extend .mt-5;
+  @extend .mb-lg-5;
+  @extend .p-5;
+  @extend .text-center;
+  @extend .text-lg-left;
+  @extend .color-white;
+
+  @include media-breakpoint-up(lg) {
+    box-shadow: 40px 40px 0px 0px rgba(162,192,202,0.63); 
+  }
+
+
+  .contact-form__title {
+    @extend .d-inline-block;
+    @extend .title;
+    @extend .title--turqoise;
+    @extend .text-center;
+    @extend .pb-2;
+  }
+
+  .contact-form__paragraph {
+    @extend .mt-3;
+    @extend .mb-lg-5;
+  }
+
+  .contact-form__button {
+    @extend .w-100;
+    font-size: .95rem;
   }
 }

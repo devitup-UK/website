@@ -19,7 +19,7 @@ export default {
                 name: ['far', 'clock'],
                 size: '3x'
               },
-              content: 'Allocated time to your projects.'
+              content: '<p>Allocated time to your projects.</p>'
             },
             {
               id: 2,
@@ -28,7 +28,7 @@ export default {
                 name: 'code',
                 size: '3x'
               },
-              content: 'Latest technologies for your solution.'
+              content: '<p>Latest technologies for your solution.</p>'
             },
             {
               id: 3,
@@ -37,7 +37,7 @@ export default {
                 name: 'phone',
                 size: '3x'
               },
-              content: 'Live updates on progress of your project.'
+              content: '<p>Live updates on progress of your project.</p>'
             }
           ]
         }

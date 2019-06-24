@@ -1,11 +1,19 @@
 <template>
   <div class="contact">
-    <page-title title="Get In Touch">We like to hear from you, whether it be to simply check in on how we are doing or if you would like a free quote on a project youhave in mind, we promise to reply as soon as possible.</page-title>
+    <page-title title="Get In Touch">We like to hear from you, whether it be to simply check in on how we are doing or if you would like a free quote on a project you have in mind, we promise to reply as soon as possible.</page-title>
     <b-container>
-        <b-row class="justify-content-center">
-            <b-col md="4" lg="3" class="box-wrapper">
-                <box :content="box.content" :icon="{ name: box.icon.name, size: box.icon.size }" :outline="box.outline" v-for="box in data.boxes" v-bind:data="box" v-bind:key="box.id"></box>
+        <b-row>
+            <b-col lg="4" order="2" order-lg="1" class="box-wrapper">
+                <box :content="box.content" :icon="{ name: box.icon.name, size: box.icon.size }" :outline="box.outline" :dashed="box.dashed" :dark="box.dashed" :condensed="box.condensed" v-for="box in data.boxes" v-bind:data="box" v-bind:key="box.id"></box>
             </b-col>
+            <b-col lg="8" order="1" order-lg="2">
+              <contact-form></contact-form>
+            </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <map-location></map-location>
+          </b-col>
         </b-row>
     </b-container>
   </div>
@@ -14,11 +22,15 @@
 <script>
 import PageTitle from '@/components/page-title/page-title.component.vue'
 import Box from '@/components/box/box.component.vue'
+import ContactForm from '@/components/contact-form/contact-form.component.vue'
+import MapLocation from '@/components/map-location/map-location.component.vue'
 
 export default {
   components: {
     PageTitle,
-    Box
+    Box,
+    ContactForm,
+    MapLocation
   },
   data() {
     return {
@@ -27,29 +39,71 @@ export default {
             {
               id: 1,
               outline: true,
+              dashed: true,
+              dark: true,
+              condensed: true,
               icon: {
-                name: ['far', 'clock'],
+                name: 'map-marker-alt',
                 size: '3x'
               },
-              content: 'Allocated time to your projects.'
+              content: `<p>Find us in Fareham, just off junction 11, use the map below to find out exactly where we are.</p>
+                        <address>
+                          17A Studland Road,<br>
+                          Lee-on-the-Solent,<br>
+                          PO13 9HY
+                        </address>`
             },
             {
               id: 2,
               outline: true,
+              dashed: true,
+              dark: true,
+              condensed: true,
               icon: {
-                name: 'code',
+                name: 'envelope',
                 size: '3x'
               },
-              content: 'Latest technologies for your solution.'
+              content: `<p>We have a range of email addresses you can use to reach different subject matters.</p>
+                        <ul>
+                          <li>
+                            <a href="mailto:admin@devitup.co.uk">admin@devitup.co.uk</a>
+                          </li>
+                          <li>
+                            <a href="mailto:support@devitup.co.uk">support@devitup.co.uk</a>
+                          </li>
+                          <li>
+                            <a href="mailto:enquiries@devitup.co.uk">enquiries@devitup.co.uk</a>
+                          </li>
+                          <li>
+                            <a href="mailto:complaints@devitup.co.uk">complaints@devitup.co.uk</a>
+                          </li>
+                        </ul>`
             },
             {
               id: 3,
               outline: true,
+              dashed: true,
+              dark: true,
+              condensed: true,
               icon: {
-                name: 'phone',
+                name: 'share-alt',
                 size: '3x'
               },
-              content: 'Live updates on progress of your project.'
+              content: `<p>Keep up to date using our social media profiles, we try to keep them up to date with our ongoing projects...</p>
+                        <ul class="socials-list">
+                          <li class="socials-list__item socials-list__item--twitter">
+                            <span>@DevItUpOfficial</span>
+                          </li>
+                          <li class="socials-list__item socials-list__item--facebook">
+                            <span>@DevItUpOfficial</span>
+                          </li>
+                          <li class="socials-list__item socials-list__item--instagram">
+                            <span>@DevItUpOfficial</span>
+                          </li>
+                          <li class="socials-list__item socials-list__item--pinterest">
+                            <span>@DevItUpOfficial</span>
+                          </li>
+                        </ul>`
             }
           ]
         }

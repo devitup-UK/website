@@ -18,6 +18,7 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.16",
     "dotenv": "^7.0.0",
+    "leaflet": "^1.5.1",
     "nightwatch": "^1.0.19",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
@@ -26,6 +27,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "@vue/cli-plugin-babel": "^3.5.0",
     "@vue/cli-plugin-eslint": "^3.5.0",
     "@vue/cli-plugin-pwa": "^3.5.0",

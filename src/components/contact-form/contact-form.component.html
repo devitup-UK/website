@@ -1,0 +1,51 @@
+<div class="contact-form">
+    <h2 class="contact-form__title">Contact Form</h2>
+    <p class="contact-form__paragraph">Need a free quote or just want to let us know about a website typo? You’ve come to the right place! Pop your details and thoughts in the form below and we will aim to get back to you *as soon as possible.</p>
+    <b-form>
+        <b-form-row>
+            <b-col lg="6">
+                <b-form-group>
+                    <b-form-input id="first-name" type="text" required placeholder="First Name" v-model="data.firstName"></b-form-input>
+                </b-form-group>
+            </b-col>
+            <b-col lg="6">
+                <b-form-group>
+                    <b-form-input id="last-name" type="text" required placeholder="Last Name" v-model="data.lastName"></b-form-input>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col>
+                <b-form-group>
+                    <b-form-input id="email" type="email" required placeholder="Email Address" v-model="data.email"></b-form-input>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col>
+                <b-form-group>
+                    <b-form-select id="subject" v-model="data.subject.selected" :options="data.subject.options"></b-form-select>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col>
+                <b-form-group>
+                    <b-form-textarea id="message" v-model="data.message" placeholder="Type your message here..." rows="6"></b-form-textarea>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col lg="6" order-sm="2" order-lg="1">
+                <b-form-group>
+                    <b-button variant="secondary" class="contact-form__button">CLEAR FORM</b-button>
+                </b-form-group>
+            </b-col>
+            <b-col lg="6" order-sm="1" order-lg="2">
+                <b-form-group>
+                    <b-button variant="secondary" class="contact-form__button">SEND</b-button>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+    </b-form>
+</div>
