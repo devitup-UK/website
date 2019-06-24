@@ -10,8 +10,10 @@
               <contact-form></contact-form>
             </b-col>
         </b-row>
+    </b-container>
+    <b-container fluid>
         <b-row>
-          <b-col>
+          <b-col class="p-0">
             <map-location></map-location>
           </b-col>
         </b-row>
