@@ -1,4 +1,4 @@
-import Service from '@/components/service/service.component.vue'
+import VueFlipcard from 'vue-flipcard';
 
 export default {
     name: 'service',
@@ -8,6 +8,11 @@ export default {
         icon: Object
     },
     components: {
-        Service
+        VueFlipcard
+    },
+    methods: {
+        manualFlip() {
+            this.$refs.flipcard.flip();
+        }
     }
 }

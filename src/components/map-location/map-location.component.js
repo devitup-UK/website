@@ -1,31 +1,27 @@
-import { LMap, LTileLayer, LMarker } from 'vue2-leaflet';
+import { LIcon, LMap, LTileLayer, LMarker } from 'vue2-leaflet';
 
 export default {
     name: 'MapLocation',
     components: {
         LMap,
         LTileLayer,
-        LMarker
+        LMarker,
+        LIcon
     },
     data () {
         return {
             data: {
-                url: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-                zoom: 3,
-                center: [47.413220, -1.219482],
-                bounds: null
+                url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+                zoom: 16,
+                center: [50.802,-1.20046],
+                bounds: null,
+                attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+                icon: {
+                    size: [90,72],
+                    anchor: [45, 72]
+                }
             }
         };
-      },
-      methods: {
-        zoomUpdated (zoom) {
-          this.data.zoom = zoom;
-        },
-        centerUpdated (center) {
-          this.data.center = center;
-        },
-        boundsUpdated (bounds) {
-          this.data.bounds = bounds;
-        }
-      }
+    }
+    
 }

@@ -9,9 +9,9 @@
 import PageTitle from '@/components/page-title/page-title.component.vue'
 import ServicesArea from '@/components/services-area/services-area.component.vue'
 
-import WebsiteDevelopmentImage from '@/assets/img/website-development.png'
-import ApplicationDevelopmentImage from '@/assets/img/application-development.png'
-import GraphicDesignImage from '@/assets/img/graphic-design.png'
+import WebsiteDevelopmentImage from '@/assets/img/website-development.jpeg'
+import ApplicationDevelopmentImage from '@/assets/img/application-development.jpeg'
+import GraphicDesignImage from '@/assets/img/graphic-design.jpeg'
 
 export default {
   name: 'services',

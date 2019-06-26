@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import GrainImage from '@/assets/img/projects/grain.jpg'
+  import GrainImage from '@/assets/img/projects/grain.jpeg'
 
   import PageTitle from '@/components/page-title/page-title.component.vue'
   import ProjectsArea from '@/components/projects-area/projects-area.component.vue'

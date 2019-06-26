@@ -115,7 +115,7 @@ a {
       @extend .left-0;
       @extend .d-block;
       @extend .background-no-repeat;
-      background: url('./assets/img/banner.png');
+      background: url('./assets/img/banner.jpeg');
       background-position: center center;
     }
 
@@ -221,7 +221,7 @@ a {
   @extend .pt-5;
   @extend .background-no-repeat;
   @extend .splitter-drop-shadow;
-  background-image: url('./assets/img/guarantee.png');
+  background-image: url('./assets/img/guarantee.jpg');
   background-position: center center;
 
   .guarantee__content, .guarantee__title {
@@ -443,7 +443,7 @@ a {
     @extend .background-no-repeat;
 
     content: '';
-    background-image: url('./assets/img/blog.png');
+    background-image: url('./assets/img/blog.jpg');
     background-position: center center;
     background-size: cover;
     z-index: 1;
@@ -624,21 +624,33 @@ header {
   padding-top: 100%;
   perspective: 1000px;
 
-  .service-card__inner {
+  // This is the new vue-flipcard stuff.
+  .vue-flipcard {
     @extend .position-absolute;
     @extend .top-0;
     @extend .right-0;
     @extend .bottom-0;
     @extend .left-0;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    @extend .w-100;
+    @extend .h-100;
   }
+  // This is where the new vue-flipcard stuff ends.
+
+  // .service-card__inner {
+  //   @extend .position-absolute;
+  //   @extend .top-0;
+  //   @extend .right-0;
+  //   @extend .bottom-0;
+  //   @extend .left-0;
+  //   text-align: center;
+  //   transition: transform 0.6s;
+  //   transform-style: preserve-3d;
+  //   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  // }
   
-  &:hover .service-card__inner {
-    transform: rotateY(180deg);
-  }
+  // &:hover .service-card__inner {
+  //   transform: rotateY(180deg);
+  // }
 
   .service-card__front, .service-card__back {
     @extend .position-absolute;
@@ -650,6 +662,9 @@ header {
   }
   
   .service-card__front {
+    @extend .text-center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
 
     img {
       @extend .w-100;
@@ -688,14 +703,26 @@ header {
           font-size: 1.5rem;
         }
       }
+
+      .service-card__front-button {
+        @extend .mt-4;
+      }
     }
   }
   
   .service-card__back {
+    @extend .text-center;
     background-color: $color-black;
     color: white;
-    transform: rotateY(180deg);
     z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+    .service-card__back-close {
+      @extend .position-absolute;
+      @extend .cursor-pointer;
+      top: 10px;
+      right: 10px;
+    }
 
     .service-card__back-content {
       @extend .position-absolute;
@@ -818,4 +845,9 @@ header {
     @extend .w-100;
     font-size: .95rem;
   }
+}
+
+.map {
+  @extend .w-100;
+  height: 400px;
 }

@@ -1,5 +1,35 @@
 <div class="service-card">
-    <div class="service-card__inner">
+    <vue-flipcard direction="horizontal" ref="flipcard" disable="disable">
+        <template v-slot:front>
+            <div class="service-card__front">
+                <img :src="img" :alt="title" :title="title">
+                <div class="service-card__up">
+                    <div class="service-card__front-content">
+                        <div class="service-card__icon">
+                            <font-awesome-icon :icon="icon.name" :size="icon.size" fixed-width />
+                        </div>
+                        <h3>{{ title }}</h3>
+                        <div class="service-card__front-button"> 
+                            <b-button variant="secondary" @click="manualFlip">FIND OUT MORE</b-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <template v-slot:back>
+            <div class="service-card__back">
+                <div class="service-card__back-close">
+                    <font-awesome-icon icon="times" size="2x" @click="manualFlip" fixed-width></font-awesome-icon>
+                </div>
+                <div class="service-card__back-content">
+                    <p>
+                        <slot></slot>
+                    </p>
+                </div>
+            </div>
+        </template>
+    </vue-flipcard>
+    <!-- <div class="service-card__inner">
         <div class="service-card__front">
             <img :src="img" :alt="title" :title="title">
             <div class="service-card__up">
@@ -18,5 +48,5 @@
                 </p>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
