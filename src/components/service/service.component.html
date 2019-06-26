@@ -1,5 +1,5 @@
 <div class="service-card">
-    <vue-flipcard direction="horizontal" ref="flipcard" disable="disable">
+    <vue-flipcard direction="horizontal" ref="flipcard" :disable="isMobile()">
         <template v-slot:front>
             <div class="service-card__front">
                 <img :src="img" :alt="title" :title="title">
@@ -9,7 +9,7 @@
                             <font-awesome-icon :icon="icon.name" :size="icon.size" fixed-width />
                         </div>
                         <h3>{{ title }}</h3>
-                        <div class="service-card__front-button"> 
+                        <div class="service-card__front-button" v-if="isMobile()"> 
                             <b-button variant="secondary" @click="manualFlip">FIND OUT MORE</b-button>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
         </template>
         <template v-slot:back>
             <div class="service-card__back">
-                <div class="service-card__back-close">
+                <div class="service-card__back-close" v-if="isMobile()">
                     <font-awesome-icon icon="times" size="2x" @click="manualFlip" fixed-width></font-awesome-icon>
                 </div>
                 <div class="service-card__back-content">

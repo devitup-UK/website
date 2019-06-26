@@ -223,6 +223,7 @@ a {
   @extend .splitter-drop-shadow;
   background-image: url('./assets/img/guarantee.jpg');
   background-position: center center;
+  background-size: cover;
 
   .guarantee__content, .guarantee__title {
     @extend .position-relative;
