@@ -634,6 +634,14 @@ header {
     @extend .left-0;
     @extend .w-100;
     @extend .h-100;
+      
+      .vue-flipcard__front,
+      .vue-flipcard__back {
+        transition: transform 1.5s;
+        @include media-breakpoint-up(lg) {
+          transition: transform .6s;
+        }
+      }
   }
   // This is where the new vue-flipcard stuff ends.
 
