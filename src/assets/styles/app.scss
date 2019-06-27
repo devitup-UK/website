@@ -535,6 +535,11 @@ header {
   @extend .text-lg-left;
   @extend .py-5;
 
+  &.toast-header {
+    @extend .mt-0;
+    @extend .py-0;
+  }
+
   background: url('./assets/img/heading-bg.png');
 
   .header__title {
@@ -786,7 +791,7 @@ header {
   .socials-list__item {
     @extend .fab;
 
-    span {
+    a {
       @extend .font-family-open-sans;
       @extend .position-relative;
       top: -5px;

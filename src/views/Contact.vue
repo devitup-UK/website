@@ -94,16 +94,13 @@ export default {
               content: `<p>Keep up to date using our social media profiles, we try to keep them up to date with our ongoing projects...</p>
                         <ul class="socials-list">
                           <li class="socials-list__item socials-list__item--twitter">
-                            <span>@DevItUpOfficial</span>
-                          </li>
-                          <li class="socials-list__item socials-list__item--facebook">
-                            <span>@DevItUpOfficial</span>
+                            <a href="https://www.twitter.com/DevItUpUK" target="_blank">@DevItUpUK</a>
                           </li>
                           <li class="socials-list__item socials-list__item--instagram">
-                            <span>@DevItUpOfficial</span>
+                            <a href="https://www.instagram.com/devitup/" target="_blank">@DevItUp</a>
                           </li>
                           <li class="socials-list__item socials-list__item--pinterest">
-                            <span>@DevItUpOfficial</span>
+                            <a href="https://www.pinterest.co.uk/devitup/" target="_blank">@DevItUp</a>
                           </li>
                         </ul>`
             }

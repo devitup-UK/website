@@ -2,7 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-import { faCode, faPhone, faLaptopCode, faMobileAlt, faPaintBrush, faMapMarkerAlt, faEnvelope, faShareAlt, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faCode, faPhone, faLaptopCode, faMobileAlt, faPaintBrush, faMapMarkerAlt, faEnvelope, faShareAlt, faTimes, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import { faFacebook, faTwitter, faInstagram, faPinterest } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from '@fortawesome/vue-fontawesome'
 import { Icon } from 'leaflet'
@@ -30,7 +30,7 @@ Icon.Default.mergeOptions({
   shadowUrl: require('leaflet/dist/images/marker-shadow.png')
 });
 
-library.add(faClock, faCode, faPhone, faFacebook, faTwitter, faInstagram, faPinterest, faLaptopCode, faMobileAlt, faPaintBrush, faMapMarkerAlt, faEnvelope, faShareAlt, faTimes)
+library.add(faClock, faCode, faPhone, faFacebook, faTwitter, faInstagram, faPinterest, faLaptopCode, faMobileAlt, faPaintBrush, faMapMarkerAlt, faEnvelope, faShareAlt, faTimes, faExclamationCircle)
 metaData.updateMetaTags(router)
 
 new Vue({

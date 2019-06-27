@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Image from '@/assets/img/team/tom.png'
+import Image from '@/assets/img/team/tom.jpg'
 import PageTitle from '@/components/page-title/page-title.component.vue'
 import TeamMember from '@/components/team-member/team-member.component.vue'
 
