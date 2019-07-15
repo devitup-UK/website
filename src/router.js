@@ -6,6 +6,7 @@ import About from './views/About.vue'
 import Services from './views/Services.vue'
 import Projects from './views/Projects.vue'
 import Contact from './views/Contact.vue'
+import NotFound from './views/Errors/404.vue'
 
 import metaData from './helpers/metadata.helper'
 
@@ -100,6 +101,24 @@ export default new Router({
           {
             property: 'og:description',
             content: 'The \'Contact\' page of our example app.'
+          }
+        ]
+      }
+    },
+    {
+      path: '*',
+      name: '404',
+      component: NotFound,
+      meta: {
+        title: metaData.generateTitle('Page Not Found'),
+        metaTags: [
+          {
+            name: 'description',
+            content: 'The \'404\' page of our example app.'
+          },
+          {
+            property: 'og:description',
+            content: 'The \'404\' page of our example app.'
           }
         ]
       }

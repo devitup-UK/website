@@ -10,19 +10,19 @@ body {
   @extend .font-family-open-sans;
   @extend .color-grey;
 
-  #app {
-    @extend .d-flex;
-    @extend .flex-column;
+  // #app {
+  //   @extend .d-flex;
+  //   @extend .flex-column;
 
-    min-height: 100vh;
+  //   min-height: 100vh;
 
-    main {
-      flex: 1;
+  //   main {
+  //     flex: 1;
 
-      // This code is to make the navigation stick while scrolling, not sure whether to keep this or not.
-      // margin-top: 180px;
-    }
-  }
+  //     // This code is to make the navigation stick while scrolling, not sure whether to keep this or not.
+  //     // margin-top: 180px;
+  //   }
+  // }
 }
 
 a {
@@ -81,6 +81,7 @@ a {
 }
 
 .banner {
+  @extend .background-color-light-grey;
   @extend .position-relative;
   @extend .color-white;
   @extend .text-center;
@@ -127,6 +128,7 @@ a {
       @extend .bottom-0;
       @extend .left-0;
       @extend .d-block;
+      @extend .d-lg-none;
       @extend .background-color-turqoise;
       opacity: .5;
     }
@@ -326,6 +328,7 @@ a {
     @extend .d-flex;
     @extend .align-self-center;
     @extend .flex-column;
+    overflow: hidden;
   }
 }
 
@@ -415,8 +418,6 @@ a {
 
   .blog__title, .blog__content {
     @extend .position-relative;
-    @extend .text-center;
-    @extend .text-lg-left;
 
     z-index: 5;
   }
@@ -448,14 +449,6 @@ a {
     background-position: center center;
     background-size: cover;
     z-index: 1;
-  }
-
-  &:after {
-    @extend .background-color-turqoise;
-
-    content: '';
-    opacity: .8;
-    z-index: 2;
   }
 
   @include media-breakpoint-up(lg) {
@@ -547,6 +540,7 @@ header {
   }
 
   .header__paragraph {
+    @extend .text-left;
     &:last-child {
       @extend .mb-0;
     }
@@ -608,6 +602,8 @@ header {
       .team-member__about {
         @extend .mb-0;
         @extend .mt-4;
+        @extend .text-left;
+        @extend .text-lg-center;
       }
     }
 
@@ -828,7 +824,7 @@ header {
   }
 }
 
-.contact-form {
+.dropshadow-box {
   background-color: $color-light-aqua;
   @extend .mt-5;
   @extend .mb-lg-5;
@@ -841,6 +837,13 @@ header {
     box-shadow: 40px 40px 0px 0px rgba(162,192,202,0.63); 
   }
 
+  &.dropshadow-box--error {
+    @extend .p-0;
+  }
+}
+
+.contact-form {
+  @extend .dropshadow-box;
 
   .contact-form__title {
     @extend .d-inline-block;
@@ -864,4 +867,28 @@ header {
 .map {
   @extend .w-100;
   height: 400px;
+}
+
+.error-visual {
+  @extend .position-relative;
+
+  .error-visual__image {
+    @extend .w-100;
+  }
+
+  &:after {
+    @extend .position-absolute;
+    @extend .top-0;
+    @extend .right-0;
+    @extend .bottom-0;
+    @extend .left-0;
+
+    content: '';
+    background-color: $color-light-aqua;
+    opacity: 0.6;
+  }
+}
+
+.not-found {
+  @extend .pb-5;
 }

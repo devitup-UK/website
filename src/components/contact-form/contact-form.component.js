@@ -3,6 +3,7 @@ import { required, minLength, email } from 'vuelidate/lib/validators'
 
 import PageTitle from '@/components/page-title/page-title.component.vue'
 import FormError from '@/components/form-error/form-error.component.vue'
+import axios from 'axios';
 
 export default {
     name: 'ContactForm',
@@ -61,18 +62,47 @@ export default {
             this.data.message = '';
         },
         onSubmit() {
-            this.$v.data.$touch()
-            if (this.$v.data.$anyError) {
+            var vm = this;
+            var firstName = vm.data.firstName;
+            var lastName = vm.data.lastName;
+            var email = vm.data.email;
+            var subject = vm.data.subject.selected;
+            var message = vm.data.message;
+            var password = process.env.VUE_APP_API_PASSWORD;
+
+            vm.$v.data.$touch();
+
+            if (vm.$v.data.$anyError) {
                 return
             }
 
-            this.resetForm();
-            this.$bvToast.toast('Your message has been submitted.', {
-                toaster: 'b-toaster-bottom-right',
-                title: 'Enquiry Submitted',
-                variant: 'success',
-                solid: true
+            axios.post(process.env.VUE_APP_API_URL + 'contact', {
+                contact: {
+                    first_name: firstName,
+                    last_name: lastName,
+                    email: email,
+                    subject: subject,
+                    message: message,
+                },
+                password: password
             })
+            .then(() => {
+                vm.resetForm();
+                vm.$bvToast.toast('Your message has been submitted.', {
+                    toaster: 'b-toaster-bottom-right',
+                    title: 'Enquiry Submitted',
+                    variant: 'success',
+                    solid: true
+                });
+            })
+            .catch(() => {
+                vm.$bvToast.toast('There was a problem submitting your message.', {
+                    toaster: 'b-toaster-bottom-right',
+                    title: 'Error Occurred',
+                    variant: 'danger',
+                    solid: true
+                });
+            });
         }
     }
 }
