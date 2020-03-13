@@ -17,6 +17,10 @@ steps:
 - task: PublishBuildArtifacts@1
 - task: Npm@1
   inputs:
+    command: 'install'
+    workingDir: '.'
+- task: Npm@1
+  inputs:
     command: 'custom'
     workingDir: '.'
     customCommand: 'run build'
