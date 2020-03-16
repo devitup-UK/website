@@ -38,12 +38,12 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: '$(Build.FTP_SERVER)'
+    serverUrl: 'ftp://$(Build.FTP_SERVER)'
     username: '$(Build.FTP_USERNAME)'
     password: '$(Build.FTP_PASSWORD)'
     rootDirectory: './dist'
     filePatterns: '**'
-    remoteDirectory: '/staging.devitup.co.uk/$(Build.BuildId)/'
+    remoteDirectory: '/staging.devitup.co.uk/public/'
     clean: false
     cleanContents: true
     preservePaths: false
