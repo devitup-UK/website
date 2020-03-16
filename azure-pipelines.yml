@@ -38,7 +38,7 @@ steps:
 - task: FtpUpload@2
   inputs:
     credentialsOption: 'inputs'
-    serverUrl: '$(Build.FTP_SERVER)'
+    serverUrl: 'ftp://tomaldy.com'
     username: '$(Build.FTP_USERNAME)'
     password: '$(Build.FTP_PASSWORD)'
     rootDirectory: './dist'
