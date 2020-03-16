@@ -35,3 +35,16 @@ steps:
     command: 'custom'
     workingDir: '.'
     customCommand: 'run build'
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: '$(Build.FTP_SERVER)'
+    username: '$(Build.FTP_USERNAME)'
+    password: '$(Build.FTP_PASSWORD)'
+    rootDirectory: './dist'
+    filePatterns: '**'
+    remoteDirectory: '/staging.devitup.co.uk/$(Build.BuildId)/'
+    clean: false
+    cleanContents: true
+    preservePaths: false
+    trustSSL: false
