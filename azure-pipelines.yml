@@ -39,8 +39,8 @@ steps:
   inputs:
     credentialsOption: 'inputs'
     serverUrl: 'ftp://tomaldy.com'
-    username: '$(Build.FTP_USERNAME)'
-    password: '$(Build.FTP_PASSWORD)'
+    username: $(Build.FTP_USERNAME)
+    password: $(Build.FTP_PASSWORD)
     rootDirectory: './dist'
     filePatterns: '**'
     remoteDirectory: '/staging.devitup.co.uk/public/'
