@@ -41,7 +41,7 @@ steps:
     serverUrl: '$(FTP_SERVER)'
     username: $(FTP_USERNAME)
     password: $(FTP_PASSWORD)
-    rootDirectory: ''
+    rootDirectory: 'dist'
     filePatterns: '**'
     remoteDirectory: '/staging.devitup.co.uk/public/$(Build.BuildId)'
     clean: false
