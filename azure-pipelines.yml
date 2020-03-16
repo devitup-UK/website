@@ -43,7 +43,7 @@ steps:
     password: $(FTP_PASSWORD)
     rootDirectory: 'dist'
     filePatterns: '**'
-    remoteDirectory: '/staging.devitup.co.uk/public/$(Build.BuildId)'
+    remoteDirectory: '/staging.devitup.co.uk/public'
     clean: false
     cleanContents: true
     preservePaths: true
