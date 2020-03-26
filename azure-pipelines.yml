@@ -1,10 +1,11 @@
 # HTML
+
 # Archive your static HTML project and save it with the build record.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
 trigger:
-- master
+- develop
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -15,3 +16,35 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: '.'
+    customCommand: 'set VUE_APP_TITLE=$(Build.VUE_APP_TITLE)'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: '.'
+    customCommand: 'set VUE_APP_URL=$(Build.VUE_APP_URL)'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '.'
+- task: Npm@1
+  inputs:
+    command: 'custom'
+    workingDir: '.'
+    customCommand: 'run build'
+- task: FtpUpload@2
+  inputs:
+    credentialsOption: 'inputs'
+    serverUrl: '$(FTP_SERVER)'
+    username: $(FTP_USERNAME)
+    password: $(FTP_PASSWORD)
+    rootDirectory: 'dist'
+    filePatterns: '**'
+    remoteDirectory: '/devitup.co.uk/public'
+    clean: false
+    cleanContents: true
+    preservePaths: true
+    trustSSL: false
