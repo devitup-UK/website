@@ -1,0 +1,9 @@
+<div class="projects-available">
+    <b-container>
+        <b-row class="justify-content-center">
+            <b-col cols="12" md="6" lg="4" v-for="project in projects" v-bind:data="project.title" v-bind:key="project.title">
+                <project :img="project.img" :title="project.title">{{ project.description }}</project>
+            </b-col>
+        </b-row>
+    </b-container>
+</div>

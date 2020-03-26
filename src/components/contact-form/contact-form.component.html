@@ -1,0 +1,58 @@
+<div class="contact-form">
+    <h2 class="contact-form__title">Contact Form</h2>
+    <p class="contact-form__paragraph">Need a free quote or just want to let us know about a website typo? You’ve come to the right place! Pop your details and thoughts in the form below and we will aim to get back to you *as soon as possible.</p>
+    <b-form @submit.stop.prevent="onSubmit">
+        <b-form-row>
+            <b-col lg="6">
+                <b-form-group>
+                    <b-form-input id="first-name" type="text" placeholder="First Name*" v-model="$v.data.firstName.$model" :state="$v.data.firstName.$dirty ? !$v.data.firstName.$error : null" aria-describedby="first-name-feedback"></b-form-input>
+                    <form-error id="first-name-feedback" v-if="!$v.data.firstName.required">This is a required field.</form-error>
+                    <form-error id="first-name-feedback" v-if="!$v.data.firstName.minLength">This field must be at least 3 characters in length.</form-error>
+                </b-form-group>
+            </b-col>
+            <b-col lg="6">
+                <b-form-group>
+                    <b-form-input id="last-name" type="text" placeholder="Last Name" v-model="data.lastName"></b-form-input>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col>
+                <b-form-group>
+                    <b-form-input id="email" type="email" placeholder="Email Address*" v-model="$v.data.email.$model" :state="$v.data.email.$dirty ? !$v.data.email.$error : null" aria-describedby="email-feedback"></b-form-input>
+                    <form-error id="email-feedback" v-if="!$v.data.email.required">This is a required field.</form-error>
+                    <form-error id="email-feedback" v-if="!$v.data.email.email">This field must be an email address.</form-error>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col>
+                <b-form-group>
+                    <b-form-select id="subject" v-model="data.subject.selected" :state="$v.data.subject.$dirty ? !$v.data.subject.$error : null" aria-describedby="subject-feedback" :options="data.subject.options"></b-form-select>
+                    <form-error id="subject-feedback" v-if="!$v.data.subject.required">This is a required field.</form-error>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col>
+                <b-form-group>
+                    <b-form-textarea id="message" v-model="$v.data.message.$model" :state="$v.data.message.$dirty ? !$v.data.message.$error : null" aria-describedby="message-feedback" placeholder="Type your message here*..." rows="6"></b-form-textarea>
+                    <form-error id="message-feedback" v-if="!$v.data.message.required">This is a required field.</form-error>
+                    <form-error id="message-feedback" v-if="!$v.data.message.minLength">This field must be at least 20 characters in length.</form-error>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+        <b-form-row>
+            <b-col lg="6" order-sm="2" order-lg="1">
+                <b-form-group>
+                    <b-button variant="secondary" class="contact-form__button" @click="resetForm()">CLEAR FORM</b-button>
+                </b-form-group>
+            </b-col>
+            <b-col lg="6" order-sm="1" order-lg="2">
+                <b-form-group>
+                    <b-button variant="secondary" class="contact-form__button" type="submit">SEND</b-button>
+                </b-form-group>
+            </b-col>
+        </b-form-row>
+    </b-form>
+</div>

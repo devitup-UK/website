@@ -1,0 +1,13 @@
+<div class="project">
+    <div class="project__title">
+        <h4>
+            <span class="title title--aqua title--center">{{ title }}</span>
+        </h4>
+    </div>
+    <div class="project__image" :style="getBackgroundImage()"></div>
+    <div class="project__content">
+        <p>
+            <slot></slot>
+        </p>
+    </div>
+</div>

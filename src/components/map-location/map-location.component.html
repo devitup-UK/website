@@ -1,0 +1,13 @@
+<div class="map">
+    <l-map :zoom="data.zoom" :center="data.center">
+        <l-tile-layer :url="data.url" :attribution="data.attribution"></l-tile-layer>
+        <l-marker :lat-lng="data.center">
+            <l-icon class-name="zone-label" :icon-anchor="data.icon.anchor" :icon-size="data.icon.size">
+                <font-awesome-icon icon="map-marker-alt" size="6x" color="#5DA0A2" fixed-width />
+            </l-icon>
+        </l-marker>
+        <!-- <l-marker :lat-lng="data.center">
+            <l-icon></l-icon>
+        </l-marker>  -->
+    </l-map>
+</div> 
