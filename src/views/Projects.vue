@@ -27,11 +27,11 @@
               img: DevItUpBlogImage,
               description: 'The DevItUp Blog is a Vue.JS frontend driven using WordPress as a backend API, each team member of DevItUp is a verified author of the DevItUp Blog. Visit the blog by clicking <a href="https://blog.devitup.co.uk" target="_blank">here</a>.'
             },
-            {
-              title: 'eatHappy',
-              img: EatHappyImage,
-              description: 'Watching what you eat is important, but keeping track of how what you eat impacts you is even more important. eatHappy is a simple app in development that allows you to build a profile that understands your health and how your food treats you.'
-            }
+            // {
+            //   title: 'eatHappy',
+            //   img: EatHappyImage,
+            //   description: 'Watching what you eat is important, but keeping track of how what you eat impacts you is even more important. eatHappy is a simple app in development that allows you to build a profile that understands your health and how your food treats you.'
+            // }
           ]
         }
       }
