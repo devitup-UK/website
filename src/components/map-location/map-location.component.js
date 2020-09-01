@@ -13,7 +13,7 @@ export default {
             data: {
                 url: 'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
                 zoom: 16,
-                center: [50.802,-1.20046],
+                center: [50.8531103,-1.2646288],
                 bounds: null,
                 attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors',
                 icon: {

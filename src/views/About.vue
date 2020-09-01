@@ -28,7 +28,7 @@ export default {
             name: 'Thomas Alderson',
             photo: Image,
             role: 'Founder & CEO',
-            about: 'I am a hardworking 25 year old Graduate Web Developer, based in Fareham, Hampshire, UK, who enjoys learning new skills and experiences. I have created websites using HTML, CSS, JavaScript (Vanilla & jQuery), PHP (Laravel), Ruby (Ruby on Rails), SQL, Git Version Control and Asp.NET'
+            about: 'I am a hardworking 26 year old Graduate Web Developer, based in Fareham, Hampshire, UK, who enjoys learning new skills and experiences. I have created websites using HTML, CSS, JavaScript (Vanilla, jQuery, Vue, Angular), PHP (Laravel), Ruby (Ruby on Rails), SQL, Git Version Control and .NET Core.'
           }
         ]
       }

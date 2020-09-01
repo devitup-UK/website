@@ -6,8 +6,6 @@
     </div>
     <div class="project__image" :style="getBackgroundImage()"></div>
     <div class="project__content">
-        <p>
-            <slot></slot>
-        </p>
+        <p v-html="content"></p>
     </div>
 </div>

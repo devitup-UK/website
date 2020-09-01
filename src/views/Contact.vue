@@ -14,7 +14,7 @@
     <b-container fluid>
         <b-row>
           <b-col class="p-0">
-            <!-- <map-location></map-location> -->
+            <map-location></map-location>
           </b-col>
         </b-row>
     </b-container>
@@ -38,23 +38,23 @@ export default {
     return {
         data: {
           boxes: [
-            // {
-            //   id: 1,
-            //   outline: true,
-            //   dashed: true,
-            //   dark: true,
-            //   condensed: true,
-            //   icon: {
-            //     name: 'map-marker-alt',
-            //     size: '3x'
-            //   },
-            //   content: `<p>Find us in Fareham, just off junction 11, use the map below to find out exactly where we are.</p>
-            //             <address>
-            //               17A Studland Road,<br>
-            //               Lee-on-the-Solent,<br>
-            //               PO13 9HY
-            //             </address>`
-            // },
+            {
+              id: 1,
+              outline: true,
+              dashed: true,
+              dark: true,
+              condensed: true,
+              icon: {
+                name: 'map-marker-alt',
+                size: '3x'
+              },
+              content: `<p>Find us in Fareham, just off junction 11, use the map below to find out exactly where we are.</p>
+                        <address>
+                          8 Clarendon Crescent,<br>
+                          Fareham,<br>
+                          PO14 4RE
+                        </address>`
+            },
             {
               id: 2,
               outline: true,
